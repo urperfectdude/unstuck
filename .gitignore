@@ -4,3 +4,9 @@
 04-landing-page.docx
 
 .DS_Store
+
+# Worker secrets and build junk. BOT_TOKEN and CHAT_ID live in Cloudflare's
+# secret store, never here.
+.dev.vars
+node_modules/
+.wrangler/

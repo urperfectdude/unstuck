@@ -1,0 +1,13 @@
+name = "unstuck-apply"
+main = "src/index.js"
+compatibility_date = "2025-07-01"
+
+# Only this origin may post applications here.
+# Change it if you move the site to a custom domain.
+[vars]
+ALLOWED_ORIGIN = "https://urperfectdude.github.io"
+
+# BOT_TOKEN and CHAT_ID are secrets, NOT vars. They are deliberately absent
+# from this file so they never enter git. Set them with:
+#   npx wrangler secret put BOT_TOKEN
+#   npx wrangler secret put CHAT_ID

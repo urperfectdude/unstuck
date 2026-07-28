@@ -11,10 +11,12 @@
      CONFIG
      ------------------------------------------------------------------ */
 
-  // Where the application POSTs. Any endpoint that accepts JSON works
-  // (Formspree, a Google Apps Script, your own API). Leave null to run the
-  // form in demo mode: it validates and shows the confirmation, sends nothing.
-  var FORM_ENDPOINT = null;
+  // Where the application POSTs. This is the Cloudflare Worker in ./worker,
+  // which holds the Telegram bot token and relays each application to the chat.
+  // The token must never appear here: this file is public.
+  // Leave null to run the form in demo mode: it validates and shows the
+  // confirmation, but sends nothing.
+  var FORM_ENDPOINT = null;  // e.g. 'https://unstuck-apply.<subdomain>.workers.dev'
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
