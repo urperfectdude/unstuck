@@ -18,6 +18,18 @@
   // confirmation, but sends nothing.
   var FORM_ENDPOINT = null;  // e.g. 'https://unstuck-apply.<subdomain>.workers.dev'
 
+  // Fallback used only while FORM_ENDPOINT is null: the browser talks to
+  // Telegram directly.
+  //
+  // WARNING: this file is served publicly, so this token is readable by anyone
+  // who views source. Whoever has it can read every application that arrives,
+  // including applicants' emails and phone numbers, and can post as the bot.
+  // Hardcoded at the owner's request as a stopgap. To close it: deploy
+  // ./worker, set FORM_ENDPOINT to its URL, blank the two values below, and
+  // regenerate the token in BotFather with /revoke.
+  var TELEGRAM_TOKEN = '8897618078:AAFrQ3IB0_BGyGBqXLO_dTVp0NanSW9KbfU';
+  var TELEGRAM_CHAT_ID = '1136028852';
+
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   document.documentElement.classList.add('js');
@@ -407,18 +419,75 @@
   }
 
   function send(data) {
-    if (!FORM_ENDPOINT) {
-      // Demo mode: nothing leaves the browser.
-      console.info('[unstuck] no FORM_ENDPOINT set; application not sent:', data);
-      return new Promise(function (resolve) { setTimeout(resolve, 600); });
+    // Preferred: the Worker in ./worker, which keeps the token server-side.
+    if (FORM_ENDPOINT) {
+      return fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+      });
     }
-    return fetch(FORM_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
-    }).then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
+
+    // Fallback: straight to Telegram from the browser, using the token above.
+    if (TELEGRAM_TOKEN && TELEGRAM_CHAT_ID) {
+      return fetch('https://api.telegram.org/bot' + TELEGRAM_TOKEN + '/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          parse_mode: 'HTML',
+          disable_web_page_preview: true,
+          text: telegramMessage(data)
+        })
+      }).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+      });
+    }
+
+    // Demo mode: nothing leaves the browser.
+    console.info('[unstuck] no endpoint configured; application not sent:', data);
+    return new Promise(function (resolve) { setTimeout(resolve, 600); });
+  }
+
+  // Mirrors the formatting in worker/src/index.js so the message reads the same
+  // whichever path delivered it.
+  function telegramMessage(data) {
+    var fields = [
+      ['name',          'Name'],
+      ['email',         'Email'],
+      ['phone',         'Phone / WhatsApp'],
+      ['what_you_run',  'Runs'],
+      ['links',         'Links'],
+      ['project',       'The project'],
+      ['stalled',       'Why it stalled'],
+      ['win',           'A clear win'],
+      ['great_at',      'Great at'],
+      ['source',        'Heard via'],
+      ['referral_code', 'Referral code'],
+      ['commit',        'All three days'],
+      ['call_slot',     'Call slot']
+    ];
+
+    var lines = ['<b>New application</b> · Unstuck House'];
+
+    fields.forEach(function (pair) {
+      var value = (data[pair[0]] || '').toString().trim();
+      if (!value) return;
+      if (value.length > 2000) value = value.slice(0, 2000) + '…';
+      lines.push('', '<b>' + esc(pair[1]) + '</b>', esc(value));
     });
+
+    if (data.submitted_at) lines.push('', '<i>' + esc(data.submitted_at) + '</i>');
+
+    // Telegram caps a message at 4096 characters.
+    var text = lines.join('\n');
+    return text.length > 4000 ? text.slice(0, 3990) + '\n<i>[truncated]</i>' : text;
+  }
+
+  function esc(value) {
+    return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
   function showConfirmation() {
