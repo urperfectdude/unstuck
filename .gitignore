@@ -1,0 +1,6 @@
+# Source copy deck. Deliberately untracked: this repo is public and serves via
+# GitHub Pages, so anything committed here is publicly downloadable. The deck
+# holds internal screening logic and pricing rationale.
+04-landing-page.docx
+
+.DS_Store

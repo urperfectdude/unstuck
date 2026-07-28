@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unstuck House: Bring the thing you've been putting off. Leave with it shipped.</title>
+<meta name="description" content="Three days in a villa in Goa with 20 solopreneurs. 25–27 September 2026. Stay, food and everything in between included. Application only.">
+
+<meta property="og:title" content="Unstuck House · Cohort 01">
+<meta property="og:description" content="Three days in a villa in Goa with 20 solopreneurs. 25–27 September 2026. Apply for a seat.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" aria-hidden="true"><span data-progress></span></div>
+
+<a class="skip-link" href="#apply">Skip to the application</a>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero__grain" aria-hidden="true"></div>
+
+  <nav class="nav wrap">
+    <span class="nav__mark">Unstuck House</span>
+    <span class="nav__meta">Cohort 01 · Goa</span>
+    <a class="nav__cta" href="#apply">Apply</a>
+  </nav>
+
+  <div class="wrap hero__inner">
+   <div class="hero__copy">
+    <p class="eyebrow" data-rise="1">20 seats</p>
+
+    <h1 class="hero__title" data-rise="2">
+      <span class="line"><span>Bring the thing</span></span>
+      <span class="line"><span>you've been putting off.</span></span>
+      <span class="line"><span class="ital">Leave with it shipped.</span></span>
+    </h1>
+
+    <p class="hero__sub" data-rise="3">
+      Three days in a villa in Goa with 20 solopreneurs. <b>25–27 September 2026.</b>
+      Stay, food and everything in between included.
+    </p>
+
+    <div class="hero__actions" data-rise="4">
+      <a class="btn btn--primary" href="#apply">
+        <span>Apply for a seat</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+   </div>
+
+    <!--
+      REEL: youtube.com/shorts/7zG1b49aCGI, served from the no-cookie domain.
+      Muted + looping + captions on, per the build notes. To swap the reel,
+      change BOTH the id in `src` and the one in `playlist=` (loop needs it).
+
+      The shield sits on top of the iframe and swallows every pointer event, so
+      YouTube's own hover chrome (title bar, share, watch-later, big play badge)
+      never gets a chance to appear. Our one button drives it over postMessage.
+    -->
+    <figure class="reel" data-rise="5">
+      <div class="reel__frame">
+        <iframe
+          class="reel__media"
+          id="reel-player"
+          src="https://www.youtube-nocookie.com/embed/7zG1b49aCGI?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=7zG1b49aCGI&amp;controls=0&amp;playsinline=1&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;disablekb=1&amp;fs=0&amp;cc_load_policy=1&amp;cc_lang_pref=en&amp;enablejsapi=1"
+          title="Unstuck House: the reel"
+          allow="autoplay; encrypted-media"
+          referrerpolicy="strict-origin-when-cross-origin"
+          tabindex="-1"></iframe>
+
+        <div class="reel__shield">
+          <button class="reel__toggle" type="button" data-reel-toggle aria-pressed="true">
+            <span class="sr-only" data-reel-label>Pause the reel</span>
+            <svg class="reel__icon reel__icon--pause" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 5v14M15 5v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+            <svg class="reel__icon reel__icon--play" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5.2v13.6L19 12 8 5.2Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+</header>
+
+<main>
+
+<!-- ============ 2 · THE PROBLEM ============ -->
+<section class="section section--problem" id="problem">
+  <div class="wrap narrow">
+    <h2 class="statement" data-reveal-words>
+      You're not stuck because you're lazy. <em>You're stuck because you're solo.</em>
+    </h2>
+    <div class="prose" data-reveal>
+      <p>There's no standup. No one waiting on it. No deadline that costs you anything if you miss it. So the project that would actually change your year sits in a tab, and the urgent stuff wins. Every week. For months.</p>
+      <p class="prose__kicker">The fix isn't another productivity system. It's a room, a deadline, and twenty people who'll notice if you don't ship.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · WHAT IT IS ============ -->
+<section class="section section--days" id="what">
+  <div class="wrap days">
+    <div class="days__aside">
+      <p class="label" data-reveal>What it is</p>
+      <h2 class="h2" data-reveal>Three days.<br>One project.<br><em>It gets done.</em></h2>
+    </div>
+
+    <ol class="days__list">
+      <li class="day" data-reveal>
+        <div class="day__rail" aria-hidden="true"><span class="day__dot"></span></div>
+        <div class="day__body">
+          <p class="day__tag">Friday</p>
+          <h3 class="day__title">Name it.</h3>
+          <p>You say out loud what you're shipping by Sunday and get paired with an accountability partner who holds you to it.</p>
+        </div>
+      </li>
+      <li class="day" data-reveal>
+        <div class="day__rail" aria-hidden="true"><span class="day__dot"></span></div>
+        <div class="day__body">
+          <p class="day__tag">Saturday</p>
+          <h3 class="day__title">Build it.</h3>
+          <p>Six hours of deep work in a room of people doing the same thing. One 45-minute session. Nothing else on the schedule.</p>
+        </div>
+      </li>
+      <li class="day" data-reveal>
+        <div class="day__rail" aria-hidden="true"><span class="day__dot"></span></div>
+        <div class="day__body">
+          <p class="day__tag">Sunday</p>
+          <h3 class="day__title">Ship it.</h3>
+          <p>A final push, then you demo what you built to the room. This is the part people remember.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 4 · WHAT'S INCLUDED ============ -->
+<section class="section section--included" id="included">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label" data-reveal>What's included</p>
+      <h2 class="h2" data-reveal>One price. <em>Turn up and build.</em></h2>
+    </div>
+
+    <ul class="cards">
+      <li class="card" data-reveal>
+        <span class="card__num">01</span>
+        <h3>Stay</h3>
+        <p>Two nights in the villa.</p>
+      </li>
+      <li class="card" data-reveal>
+        <span class="card__num">02</span>
+        <h3>All food</h3>
+        <p>Every meal, snacks, coffee running all day.</p>
+      </li>
+      <li class="card" data-reveal>
+        <span class="card__num">03</span>
+        <h3>Morning movement</h3>
+        <p>Yoga or a workout, your call.</p>
+      </li>
+      <li class="card" data-reveal>
+        <span class="card__num">04</span>
+        <h3>A workshop and night events</h3>
+        <p>Plus a beach bonfire.</p>
+      </li>
+      <li class="card" data-reveal>
+        <span class="card__num">05</span>
+        <h3>The work engine</h3>
+        <p>Goal setting, an accountability partner, coached focus blocks.</p>
+      </li>
+      <li class="card" data-reveal>
+        <span class="card__num">06</span>
+        <h3>The room</h3>
+        <p>19 other operators at your level.</p>
+      </li>
+    </ul>
+
+    <p class="footnote" data-reveal>Not included: flights and airport transfers.</p>
+  </div>
+</section>
+
+<!-- ============ 5 · WHO THIS IS FOR ============ -->
+<section class="section section--fit" id="fit">
+  <div class="wrap fit">
+    <div class="fit__col fit__col--yes" data-reveal>
+      <p class="label">This is for you if</p>
+      <p class="fit__text">You run your own thing with no team around you: freelancer, indie founder, designer, developer, creator. And you can name <em>one specific project</em> that has been stalled for months.</p>
+    </div>
+    <div class="fit__col fit__col--no" data-reveal>
+      <p class="label">This isn't for you if</p>
+      <p class="fit__text">You're looking to network in general, want a course from scratch, or want a holiday. It's a working weekend and the room is picked to protect that.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · PRICE ============ -->
+<section class="section section--price" id="price">
+  <div class="wrap narrow price">
+    <p class="label" data-reveal>Price</p>
+    <p class="price__figure" data-reveal>
+      <span class="price__currency">₹</span><span class="price__amount" data-countup="30000">30,000</span><span class="price__allin">, all in.</span>
+    </p>
+    <div class="prose" data-reveal>
+      <p>Stay, food, activities, everything. Discounts up to <b>₹10,000</b> available for early applications, partner codes and referrals.</p>
+    </div>
+
+    <p class="price__flag" data-reveal>
+      Apply before <b>20 August</b> and we'll take <b>₹5,000</b> off automatically.
+    </p>
+
+    <p class="prose__kicker" data-reveal>You don't pay to apply. If we accept you after the interview, we'll send you a personal payment link with your discount already applied.</p>
+
+    <a class="btn btn--primary" href="#apply" data-reveal>
+      <span>Apply for a seat</span>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ 7 · HOW IT WORKS ============ -->
+<section class="section section--steps" id="how">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="label" data-reveal>How it works</p>
+      <h2 class="h2" data-reveal>Four steps, <em>about a week.</em></h2>
+    </div>
+
+    <ol class="steps">
+      <li class="step" data-reveal>
+        <span class="step__num">1</span>
+        <h3>Apply</h3>
+        <p>Six questions, five minutes. Free.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step__num">2</span>
+        <h3>We review</h3>
+        <p>We read it and look at your work. You hear back within 48 hours either way.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step__num">3</span>
+        <h3>A 15-minute call</h3>
+        <p>We talk about your project and what you want done by Sunday. This is how we build a room that works.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step__num">4</span>
+        <h3>Your seat</h3>
+        <p>If it's a yes, we send you a personal payment link with your discount applied. Pay within 72 hours and you're in.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 8 · FAQ ============ -->
+<section class="section section--faq" id="faq">
+  <div class="wrap narrow">
+    <div class="section__head">
+      <p class="label" data-reveal>FAQ</p>
+      <h2 class="h2" data-reveal>The questions <em>everyone asks.</em></h2>
+    </div>
+
+    <div class="faq">
+      <details class="qa" data-reveal>
+        <summary><span>Why do I have to be interviewed?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__panel"><div><p>Because the room is the product. Twenty people is small enough that one wrong person changes the weekend for everyone.</p></div></div>
+      </details>
+      <details class="qa" data-reveal>
+        <summary><span>What counts as a “project”?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__panel"><div><p>Anything specific and shippable in three days. A launch, a site, a course, a first version, a pitch, a portfolio, a piece of writing you've been avoiding. “Grow my business” isn't a project.</p></div></div>
+      </details>
+      <details class="qa" data-reveal>
+        <summary><span>What if I don't finish?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__panel"><div><p>Most people finish. Everyone who doesn't leaves further along in three days than in the previous three months, with a partner still checking on them.</p></div></div>
+      </details>
+      <details class="qa" data-reveal>
+        <summary><span>Where in Goa?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__panel"><div><p>We confirm the villa once the cohort is locked, and share it with everyone who's in. North Goa, easy reach from the airport.</p></div></div>
+      </details>
+      <details class="qa" data-reveal>
+        <summary><span>Can I come for one day?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__panel"><div><p>No. The whole thing works because everyone's there for all of it.</p></div></div>
+      </details>
+      <details class="qa" data-reveal>
+        <summary><span>What's the refund policy?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__panel"><div><p>Full refund if you cancel more than 14 days out. After that we can transfer your seat but can't refund it. The villa and food are booked on your headcount.</p></div></div>
+      </details>
+      <details class="qa" data-reveal>
+        <summary><span>I have a partner code.</span><i aria-hidden="true"></i></summary>
+        <div class="qa__panel"><div><p>Enter it on the form and we'll apply it to your link.</p></div></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPLICATION FORM ============ -->
+<section class="section section--apply" id="apply">
+  <div class="wrap narrow">
+
+    <div class="apply__head">
+      <p class="label" data-reveal>The application</p>
+      <h2 class="h2" data-reveal>Six questions. <em>Under five minutes. Free.</em></h2>
+      <p class="apply__note" data-reveal>No payment here. Just the questions, and when you're free for a 15-minute call.</p>
+    </div>
+
+    <form class="form" id="application-form" novalidate data-reveal>
+      <div class="field">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+        <p class="field__error" data-error></p>
+      </div>
+
+      <div class="form__row">
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@domain.com">
+          <p class="field__error" data-error></p>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone / WhatsApp</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+91…">
+          <p class="field__error" data-error></p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-run">What do you run? <span class="hint">One line.</span></label>
+        <input id="f-run" name="what_you_run" type="text" required>
+        <p class="field__error" data-error></p>
+      </div>
+
+      <div class="field">
+        <label for="f-links">Your links <span class="hint">LinkedIn, X, website or portfolio</span></label>
+        <input id="f-links" name="links" type="text" required>
+        <p class="field__error" data-error></p>
+      </div>
+
+      <div class="field field--key">
+        <label for="f-project">What's the one project you've been putting off that you'd work on here?</label>
+        <textarea id="f-project" name="project" rows="4" required minlength="40" data-counter></textarea>
+        <p class="field__meta"><span class="hint">Be specific. Vague answers here are a no.</span><span data-count>0</span></p>
+        <p class="field__error" data-error></p>
+      </div>
+
+      <div class="field field--key">
+        <label for="f-stalled">Why has it stalled?</label>
+        <textarea id="f-stalled" name="stalled" rows="4" required minlength="40" data-counter></textarea>
+        <p class="field__meta"><span class="hint">Honest beats polished.</span><span data-count>0</span></p>
+        <p class="field__error" data-error></p>
+      </div>
+
+      <div class="field">
+        <label for="f-win">What would make this weekend a clear win for you?</label>
+        <textarea id="f-win" name="win" rows="3" required></textarea>
+        <p class="field__error" data-error></p>
+      </div>
+
+      <div class="field">
+        <label for="f-great">What are you great at that the room could learn from?</label>
+        <textarea id="f-great" name="great_at" rows="3" required></textarea>
+        <p class="field__error" data-error></p>
+      </div>
+
+      <div class="form__row">
+        <div class="field">
+          <label for="f-source">How did you hear about us?</label>
+          <div class="select">
+            <select id="f-source" name="source" required>
+              <option value="" selected disabled>Choose one</option>
+              <option>Instagram</option>
+              <option>LinkedIn</option>
+              <option>X</option>
+              <option>A friend</option>
+              <option>A creator</option>
+              <option>Other</option>
+            </select>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p class="field__error" data-error></p>
+        </div>
+        <div class="field">
+          <label for="f-code">Partner or referral code <span class="hint">optional</span></label>
+          <input id="f-code" name="referral_code" type="text">
+        </div>
+      </div>
+
+      <fieldset class="field field--commit">
+        <legend>Can you commit to all three days, 25–27 September?</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="commit" value="Yes" required><span>Yes</span></label>
+          <label class="choice"><input type="radio" name="commit" value="No"><span>No</span></label>
+        </div>
+        <p class="field__error" data-error></p>
+      </fieldset>
+
+      <!-- Interview scheduling: a preference, not a booked slot. -->
+      <div class="slot" data-slot data-reveal>
+        <div class="slot__head">
+          <p>Step three is a 15-minute call. Tell us when you're free and we'll lock one in with your acceptance. <span>All times IST.</span></p>
+        </div>
+
+        <div class="field">
+          <label for="f-calldate">A day that works</label>
+          <input id="f-calldate" name="call_date" type="date" required>
+          <p class="field__error" data-error></p>
+        </div>
+
+        <fieldset class="field field--window">
+          <legend>A window that works</legend>
+          <div class="choices choices--wrap">
+            <label class="choice"><input type="radio" name="call_window" value="Morning · 9–12" required><span>Morning<b>9–12</b></span></label>
+            <label class="choice"><input type="radio" name="call_window" value="Afternoon · 12–4"><span>Afternoon<b>12–4</b></span></label>
+            <label class="choice"><input type="radio" name="call_window" value="Evening · 4–8"><span>Evening<b>4–8</b></span></label>
+            <label class="choice"><input type="radio" name="call_window" value="Late · 8–10"><span>Late<b>8–10</b></span></label>
+          </div>
+          <p class="field__error" data-error></p>
+        </fieldset>
+
+        <p class="slot__summary" data-slot-summary hidden>
+          We'll aim for <b data-slot-text></b>.
+        </p>
+      </div>
+
+      <div class="form__submit">
+        <button class="btn btn--primary btn--block" type="submit">
+          <span>Send my application</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form__legal">Free to apply. We read every one ourselves.</p>
+        <p class="form__error" data-form-error role="alert" hidden></p>
+      </div>
+    </form>
+
+    <!-- Confirmation state, swapped in on successful submit -->
+    <div class="confirm" id="confirmation" hidden>
+      <div class="confirm__mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M12 25l9 9 16-19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2 class="h2">Application in.</h2>
+      <p>We read every one of these ourselves. You'll hear back within 48 hours either way. If it's a yes, we'll confirm your 15-minute call for <b data-confirm-slot>the window you picked</b>.</p>
+      <p class="confirm__ps">In the meantime: the reel is <a href="#top">here</a>, and the fastest way to move up the list is to tell one other solopreneur who's sitting on something they can't finish.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 9 · CLOSING ============ -->
+<section class="section section--close" id="close">
+  <div class="wrap narrow">
+    <h2 class="statement statement--close" data-reveal-words>
+      20 seats. One of them has your name on it, <em>if you actually want to finish the thing.</em>
+    </h2>
+    <a class="btn btn--invert" href="#apply" data-reveal>
+      <span>Apply for a seat</span>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p class="footer__mark">Unstuck House · Cohort 01</p>
+    <p class="footer__links">
+      Questions?
+      <a href="mailto:hello@unstuckhouse.com">Email</a>
+      <a href="#" rel="noopener">Instagram</a>
+      <a href="#" rel="noopener">X</a>
+    </p>
+    <p class="footer__fine">25–27 September 2026 · North Goa · 20 seats</p>
+  </div>
+</footer>
+
+<!-- Sticky mobile CTA -->
+<div class="stickybar" data-stickybar>
+  <div class="stickybar__inner">
+    <div class="stickybar__text">
+      <b>₹30,000 all in</b>
+      <span>25–27 Sept · Goa · 20 seats</span>
+    </div>
+    <a class="btn btn--primary btn--sm" href="#apply">Apply for a seat</a>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
